@@ -1,6 +1,6 @@
 # webpack-translate
 
-[中文](https://github.com/aiyuekuang/webpack-translate/blob/master/README.md)|[英文](https://github.com/aiyuekuang/webpack-translate/blob/master/README.en.md)
+[中文](https://github.com/aiyuekuang/webpack-translate/blob/master/README.md) | [EN](https://github.com/aiyuekuang/webpack-translate/blob/master/README.en.md)
 
 
 
