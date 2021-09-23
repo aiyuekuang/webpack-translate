@@ -11,7 +11,7 @@ export default class TranslateMain {
 
     static defaultProps = {
         /** 查看类型*/
-        translateTypes: ["en", "ko", "ja"],
+        translateTypes: ["en"],
         /** 输出的语言文件的后缀名*/
         suffix: "js",
         /** 输出的语言文件相对项目根目录的地址 */
@@ -66,8 +66,7 @@ export default class TranslateMain {
     source = '../src/components/locales/zh_CN.js'
     file = null
 
-    objectLoop(obj, fun = () => {
-    }) {
+    objectLoop(obj, fun = () => {}) {
         for (let i in obj) {
             if (typeof (obj[i]) === "object") {
                 this.objectLoop(obj[i], fun)
