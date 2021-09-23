@@ -19,9 +19,11 @@ yarn add webpack-translate
 ```js
 //webpack.config.js
 //webpack配置中的plugins属性
+import Translate from "webpack-translate";
+
 
 plugins: [
-            new Tarnslate({
+            new Translate({
                 translateTypes:["en", "ko", "ja","gd"],
                 suffix:"js",
                 path:path.resolve(__dirname,"./src/components/locales"),

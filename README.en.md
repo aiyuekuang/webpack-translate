@@ -17,9 +17,11 @@ Use：
 ```js
 //webpack.config.js
 //Plugins property in webpack configuration
+import Translate from "webpack-translate";
+
 
 plugins: [
-            new Tarnslate({
+            new Translate({
                 translateTypes:["en", "ko", "ja","gd"],
                 suffix:"js",
                 path:path.resolve(__dirname,"./src/components/locales"),
