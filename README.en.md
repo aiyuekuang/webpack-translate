@@ -35,10 +35,10 @@ Document：
 
 | api            | type          | Default value                               | explain                                                         |
 | -------------- | ------------- | ------------------------------------ | ------------------------------------------------------------ |
-| translateTypes | array[string] | ["en"]                               | 需翻译的目标语言简写，[地址](https://github.com/aiyuekuang/webpack-translate/blob/master/src/translate/utils/lang.js) |
-| suffix         | string        | "js"                                 | 输出的语言文件的后缀名                                       |
-| path           | string        | './src/components/locales/'          | 输出的语言文件相对项目根目录的地址                           |
-| source         | string        | '../src/components/locales/zh_CN.js' | 需作为源语言进行翻译的文件                                   |
+| translateTypes | array[string] | ["en"]                               | Target language abbreviation to be translated, query abbreviation [address](https://github.com/aiyuekuang/webpack-translate/blob/master/src/translate/utils/lang.js) |
+| suffix         | string        | "js"                                 | The suffix of the output language file                                       |
+| path           | string        | './src/components/locales/'          | The address of the output language file relative to the project root directory                          |
+| source         | string        | '../src/components/locales/zh_CN.js' | Documents to be translated as source language                                   |
 
 
 
