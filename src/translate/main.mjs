@@ -3,7 +3,6 @@ import path from "path"
 import {cloneop} from "esn";
 import translate from "@vitalets/google-translate-api"
 
-const __dirname = path.resolve();
 
 export default class TranslateMain {
 
