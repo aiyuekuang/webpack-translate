@@ -44,6 +44,7 @@ export default class TranslateMain {
         }
 
 
+
         this.file = fs.readFileSync(this.source, "utf-8");
         this.file = this.file.split("export default")[1];
         this.file = (new Function("return " + this.file))();
