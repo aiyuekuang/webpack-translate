@@ -20,7 +20,10 @@ export default class TranslateMain {
         /** 输出文件的其他名称设置，与上方translateTypes的数组一一对应即可，注意必须保持一致*/
         outputFileName: [],
         /** 翻译源文件的语言简码*/
-        from: "zh-CN"
+        from: "zh-CN",
+        /** 固定工人工翻译的字段集合，如{en:{head:"tou"}}，结构语言->字段*/
+        fixedTranslate: null
+
     }
 
     constructor(config) {
@@ -42,7 +45,9 @@ export default class TranslateMain {
         if (config.from) {
             this.from = config.from;
         }
-
+        if (config.fixedTranslate) {
+            this.fixedTranslate = config.fixedTranslate
+        }
 
 
         this.file = fs.readFileSync(this.source, "utf-8");
@@ -70,6 +75,9 @@ export default class TranslateMain {
                     this.objectLoop(Symbol[this.translateTypes[i]], (data, t) => {
                         // console.log(112233,splicing,this.index)
                         data[t] = splicing[this.index]
+                        if (this.fixedTranslate && this.fixedTranslate[this.translateTypes[i]] && this.fixedTranslate[this.translateTypes[i]][t]) {
+                            data[t] = this.fixedTranslate[this.translateTypes[i]][t]
+                        }
                     });
                     fs.writeFile(file, "export default " + JSON.stringify(Symbol[this.translateTypes[i]], null, 4), {encoding: 'utf8'}, err => {
                     })
@@ -88,6 +96,7 @@ export default class TranslateMain {
     file = null
     outputFileName = []
     from = "zh-CN"
+    fixedTranslate = null
 
     objectLoop(obj, fun = () => {
     }) {

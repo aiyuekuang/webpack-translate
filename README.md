@@ -45,6 +45,7 @@ plugins: [
 | source         | string        | '../src/components/locales/zh_CN.js' | 需作为源语言进行翻译的文件                                   |
 | outputFileName | array[string] | []                                   | 输出文件的其他名称设置，与上方translateTypes的数组一一对应即可，注意个数必须保持一致 |
 | from           | string        | "zh-CN"                              | 翻译源文件的语言简码                                         |
+| fixedTranslate | object        | null                                 | 固定工人工翻译的字段集合，如{en:{head:"tou"}}，结构：translateTypes语言类型 -> 字段 |
 
 
 
